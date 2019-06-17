@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-if="this.$store.state.dataIsRecived" class="weather-widget"> // widget itself
-      <p class="weather-widget__city">{{ weather.city_name }}</p>
-      <h2 class="weather-widget__temp">{{ weather.temp }}<span>°C</span></h2>
-      <p class="weather-widget__status">{{ weather.weather.description }}</p>
+    <div v-if="this.$store.state.dataIsRecived" class="weather-widget"> 
+      <p class="weather-widget__city">{{ weather.name }}</p>
+      <h2 class="weather-widget__temp">{{ weather.main.temp }}<span>°C</span></h2>
+      <p class="weather-widget__status">the average himudity is {{ weather.main.humidity }} %</p>
     </div>
-    <div v-else class="weather-widget"> // preloader
+    <div v-else class="weather-widget"> 
       <img src="spinner.svg" alt="">
     </div>
   </div>
@@ -24,7 +24,7 @@
   }
 </script>
 
-<style lang="scss" scoped> // some styles 🖍️
+<style lang="scss" scoped>
   .weather-widget {
     display: flex;
     flex-direction: column;

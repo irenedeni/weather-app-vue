@@ -2,13 +2,13 @@
   <div id="app"> 
     <div class="nav"> 
       <router-link to="/" class="nav__link">Home</router-link>
-      <router-link to="/about" class="nav__link">About</router-link>
+      <router-link to="/why" class="nav__link">Why</router-link>
     </div>
     <router-view /> 
   </div>
 </template>
 
-<style lang="scss"> // some styles 🖍️
+<style lang="scss"> 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap&subset=cyrillic');
 
   body {

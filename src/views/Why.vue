@@ -1,11 +1,11 @@
 <template>
-  <div class="about">
-    <p>Thanks <a href="https://www.weatherbit.io/">Weatherbit</a> for public API!</p>
+  <div class="why">
+    <p>Why ?</p>
   </div>
 </template>
 
 <style lang="scss" scoped> // some styles 🖍️
-  .about {
+  .why {
     display: flex;
     justify-content: center;
     align-items: center;

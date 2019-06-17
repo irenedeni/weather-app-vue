@@ -15,10 +15,10 @@ export default new Vuex.Store({
     UPDATE_WEATHER(state) {
       service
         .getWeather() // call the function from service.js that returns the data from API
-        .then(response => { // if the response was get
-          state.weather = response.data.data[0]; // set weather obj in state to real weather obj
+        .then(response => {
+          state.weather = response.data; // set weather obj in state to real weather obj
           state.dataIsRecived = true; // mark that data was recived
-          console.log(response); // and log it
+          console.log(state.weather.main)
         })
         .catch(error => { // if there was an error
           console.log("There was an error:", error.response); // log it

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { currentWeather } from "@/constants"; 
 
-const apiClient = axios.create({ // create promise
+const apiClient = axios.create({ 
   baseURL: currentWeather,
   withCredentials: false, 
   headers: { 
