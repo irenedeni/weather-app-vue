@@ -1,5 +1,8 @@
 # weather-app-vue
 
+### [WIP!]
+Simple app using vue with vuex. Gets data for Amsterdam, input for new cities is WIP.
+
 ## Project setup
 ```
 yarn install
