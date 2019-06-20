@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue"; // import components that you wish to became Routes
+import Home from "./views/Home.vue"; 
 
-Vue.use(Router); // tella Vue to action with Router
+Vue.use(Router); // tells Vue to action with Router
 
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [ // All the routes are described here
+  routes: [ 
     {
       path: "/",
       name: "home",

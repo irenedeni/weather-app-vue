@@ -1,9 +1,10 @@
 <template>
   <div>
-    <div v-if="this.$store.state.dataIsRecived" class="weather-widget"> 
+    <div v-if="this.$store.state.dataIsRecived" class="weather-widget">     
       <p class="weather-widget__city">{{ weather.name }}</p>
-      <h2 class="weather-widget__temp">{{ weather.main.temp }}<span>°C</span></h2>
-      <p class="weather-widget__status">the average himudity is {{ weather.main.humidity }} %</p>
+      <p class="weather-widget__description">{{ weather.weather[0].description }}</p>
+      <h2 class="weather-widget__temp">{{(weather.main.temp -273.15).toFixed(1)}}<span>°C</span></h2>
+      <p class="weather-widget__status">the average humidity is {{ weather.main.humidity }} %</p>
     </div>
     <div v-else class="weather-widget"> 
       <img src="spinner.svg" alt="">
@@ -30,10 +31,12 @@
     flex-direction: column;
     align-items: center;
     color: #429EA6;
+    padding: 10vh;
+    border-radius: 24px;
   }
 
   .weather-widget__city {
-    font-size: 20px;
+    font-size: 50px;
     margin: 0;
   }
 
@@ -50,6 +53,12 @@
       font-weight: 400;
       margin-top: 35px;
     }
+  }
+
+ .weather-widget__description {
+    font-size: 20px;
+    margin: 0;
+    color: rgb(21, 80, 74);
   }
 
   .weather-widget__status {
